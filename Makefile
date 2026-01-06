@@ -3,7 +3,7 @@ NAME = libft_test
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
-SRC = ft_isalnum.c ft_isdigit.c ft_isalpha.c main.c
+SRC = ft_isascii.c ft_isalnum.c ft_isdigit.c ft_isalpha.c main.c
 OBJ = $(SRC:.c=.o)
 
 HEADER = libft.h
