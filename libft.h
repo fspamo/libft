@@ -2,5 +2,6 @@
 #define LIBFT_H
 
 int	ft_isalpha();
+int	ft_isdigit();
 
 #endif
