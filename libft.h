@@ -10,5 +10,6 @@ int		ft_isprint();
 int		ft_strlen();
 void	*ft_memset();
 void	*ft_bzero();
+void	*ft_memcpy();
 
 #endif
