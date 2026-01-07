@@ -5,5 +5,8 @@
 
 int main(void)
 {
+	char dst[] = "muhammet";
+	char src[] = "cahit";
 
+	printf("%s", ft_strlcpy(dst, src, 3));
 }
