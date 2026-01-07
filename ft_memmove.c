@@ -6,11 +6,17 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 15:03:20 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/07 15:04:39 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/07 16:16:43 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *memmove(void *dest, const void *src, size_t n)
+void *ft_memmove(void *dest, const void *src, size_t n)
 {
-	
+	int i;
+
+	i = 0;
+	while(n > 0)
+	{
+	}
+	return (dest);
 }
