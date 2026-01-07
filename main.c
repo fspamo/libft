@@ -1,40 +1,46 @@
 #include "libft.h"
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
-
-/* Prototype of your function */
-void *ft_memset(void *b, int c, size_t len);
 
 int main(void)
 {
-    char buffer1[20];
-    char buffer2[20];
+    char str1[20];
+    char str2[20];
 
-    /* Test 1: basic usage */
-    ft_memset(buffer1, 'A', 10);
-    buffer1[10] = '\0';
-    printf("ft_memset result: \"%s\"\n", buffer1);
+    /* Initialize both buffers with 'A's */
+    memset(str1, 'A', sizeof(str1));
+    memset(str2, 'A', sizeof(str2));
 
-    /* Compare with libc memset */
-    memset(buffer2, 'A', 10);
-    buffer2[10] = '\0';
-    printf("memset result   : \"%s\"\n", buffer2);
+    printf("Before ft_bzero:\n");
+    printf("str1: %s\n", str1);
 
-    /* Test 2: fill with zero */
-    ft_memset(buffer1, 0, sizeof(buffer1));
-    printf("ft_memset zeroed: \"%s\"\n", buffer1);
+    /* Use ft_bzero */
+    ft_bzero(str1, 10);  // zero first 10 bytes
+    memset(str2, 0, 10); // standard bzero/memset for comparison
 
-    /* Test 3: partial overwrite */
-    strcpy(buffer1, "Hello, world!");
-    ft_memset(buffer1 + 7, 'X', 5);
-    printf("partial overwrite: \"%s\"\n", buffer1);
+    printf("After ft_bzero:\n");
+    printf("str1: ");
+    for (int i = 0; i < 20; i++)
+        printf("%02X ", (unsigned char)str1[i]);
+    printf("\n");
 
-    /* Test 4: return value */
-    if (ft_memset(buffer1, 'Z', 3) == buffer1)
-        printf("Return value test: OK\n");
+    printf("Expected:\n");
+    printf("str2: ");
+    for (int i = 0; i < 20; i++)
+        printf("%02X ", (unsigned char)str2[i]);
+    printf("\n");
+
+    /* Test zeroing entire buffer */
+    ft_bzero(str1, sizeof(str1));
+    int all_zero = 1;
+    for (long unsigned int i = 0; i < sizeof(str1); i++)
+        if (str1[i] != 0)
+            all_zero = 0;
+
+    if (all_zero)
+        printf("Full buffer zero test: OK\n");
     else
-        printf("Return value test: FAIL\n");
+        printf("Full buffer zero test: FAIL\n");
 
     return 0;
 }

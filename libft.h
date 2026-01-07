@@ -9,5 +9,6 @@ int		ft_isascii();
 int		ft_isprint();
 int		ft_strlen();
 void	*ft_memset();
+void	*ft_bzero();
 
 #endif
