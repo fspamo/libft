@@ -4,9 +4,6 @@
 #include <stdlib.h>
 
 int main(void)
-{
-	char dst[] = "muhammet";
-	char src[] = "cahit";
-
-	ft_strlcat(dst, src, sizeof(dst));
+{	
+	printf("%d", ft_tolower('A'));
 }
