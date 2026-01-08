@@ -16,5 +16,11 @@ char	*ft_strlcpy();
 size_t	ft_strlcat();
 int		ft_toupper();
 int		ft_tolower();
+char	*ft_strchr();
+char	*ft_strrchr();
+int		ft_strncmp();
+void	*ft_memchr();
+int		ft_memcmp();
+char	*ft_strnstr()
 
 #endif
