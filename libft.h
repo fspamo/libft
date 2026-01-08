@@ -13,5 +13,6 @@ void	*ft_bzero();
 void	*ft_memcpy();
 void	*ft_memmove();
 char	*ft_strlcpy();
+size_t	ft_strlcat();
 
 #endif
