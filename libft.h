@@ -23,5 +23,6 @@ void	*ft_memchr();
 int		ft_memcmp();
 char	*ft_strnstr();
 int		ft_atoi();
+void	*ft_calloc();
 
 #endif
