@@ -6,7 +6,7 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 16:10:12 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/09 17:48:42 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:19:20 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,5 @@ void *ft_calloc(size_t nmemb, size_t size)
 		return NULL;
 	}
 	ptr = malloc(nmemb * size);
-	// ft_memset(ptr, 0, );
 	return (ptr);
 }
