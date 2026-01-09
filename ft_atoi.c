@@ -1,37 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/08 17:52:53 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/09 11:57:54 by cbozkurt         ###   ########.fr       */
+/*   Created: 2026/01/09 12:20:15 by cbozkurt          #+#    #+#             */
+/*   Updated: 2026/01/09 15:42:29 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include "libft.h"
-
-char *ft_strnstr(const char *big, const char *little, size_t len)
+int ft_atoi(const char *nptr)
 {
-	size_t i;
-	size_t j;
+	int i;
+	int sign;
+	long int final;
 
 	i = 0;
-	j = 0;
-	while(i != len)
+	final = 0;
+	sign = 1;
+	while(((nptr[i] == ' ') || (nptr[i] >= 9 && nptr[i] <= 13)) && (nptr[i] != '\0'))
 	{
-		j = 0;
-		while((big[i+j] == little[j]) && (little[j] != '\0') && (i+j != len))
-		{
-			j++;
-		}
-		if(j == (size_t)ft_strlen(little))
-		{
-			return ((char *)&big[i]);
-		}
 		i++;
 	}
-	return ((void *) 0);
+	if(nptr[i] == '-')
+	{
+		sign = -sign;
+		i++;
+	}
+	else if(nptr[i] == '+')
+		i++;
+	while((nptr[i] >= '0' && nptr[i] <= '9') && (nptr[i] != '\0'))
+	{
+		final = (nptr[i] - '0') + final * 10;
+		i++;
+	}
+	return (sign * final);
 }

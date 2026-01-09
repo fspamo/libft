@@ -7,5 +7,10 @@
 
 int main(void)
 {
-
+	printf("======\n");
+	printf("Original\n");
+	printf("%d \n", atoi(" ++1337"));
+	printf("My implementation\n");
+	printf("%d \n", ft_atoi(" --1337"));
+	printf("======");
 }

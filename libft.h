@@ -21,6 +21,7 @@ char	*ft_strrchr();
 int		ft_strncmp();
 void	*ft_memchr();
 int		ft_memcmp();
-char	*ft_strnstr()
+char	*ft_strnstr();
+int		ft_atoi();
 
 #endif
