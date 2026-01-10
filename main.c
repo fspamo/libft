@@ -5,6 +5,6 @@
 
 int main(void)
 {
-	char s[] = "foo";
-	printf("%s", ft_strdup(s));
+	char s[] = "long long time ago";
+	printf("%s", ft_substr(s, 6, 5));
 }
