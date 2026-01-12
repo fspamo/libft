@@ -1,21 +1,22 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "libft.h"
 
-int count_word_lenght(char *s, char c)
-{
-	int len = 0;
-
-	while (s[len] && s[len] != c)
-		len++;
-
-	return len;
-}
-
 int main(void)
 {
-	char str[] = "this is a word";
-	char c = ' ';
-	
-	count_word_lenght(str, c);
+    char str[] = "t     his should be splitted";
+    char c = ' ';
+    char **result;
+    int i = 0;
+
+    result = ft_split(str, c);
+
+    while (result[i])
+    {
+        printf("%s\n", result[i]);
+        i++;
+    }
+    return (0);
 }
+

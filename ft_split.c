@@ -4,40 +4,56 @@
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/11 18:21:22 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/11 21:48:30 by cbozkurt         ###   ########.fr       */
+/*                                                +#+#+#+#+#+   +#+           */ /*   Created: 2026/01/11 18:21:22 by cbozkurt          #+#    #+#             */
+/*   Updated: 2026/01/12 21:59:12 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <stddef.h>
 #include "libft.h"
 
-int count_word_lenght(char *s, char c)
+size_t count_words(char const *s, char c)
 {
-	int length = 0;
+	int word_count;
+	int i = 0;
 
-    while (s[length] && s[length] != c)
-        len++;
-
-    return len;
+	word_count = 0;;
+	i = 0;
+	while(s[i] != c && s[i] != '\0')
+	{
+		word_count++;
+		i++;
+	}
+	return word_count;
 }
 
 char **ft_split(char const *s, char c)
 {
+	char **new_str;
 	int i;
-	int each_length;
+	int w;
 
+	new_str = malloc((ft_strlen(s) + 1) * sizeof(char *));
+	if(!new_str)
+		return NULL;
 	i = 0;
-	str = malloc(size_of(ft_strlen());
-	//skipping repeating seperaters
+	w = 0;
 	while(s[i] == c)
-		i++;	
+		i++;
 	while(s[i])
 	{
-		each_length = count_word_lenght(&s[i], c);
-		str[i] = malloc(size_t(each_length) + 1);
-		i++;
+		new_str[w] = malloc(count_words(&s[i], c)+ 1);
+		if(!new_str[w])
+			return NULL;
+		memcpy(new_str[w], &s[i], count_words(&s[i], c));
+		new_str[w][count_words(&s[i], c)] = '\0';
+		i += count_words(&s[i], c);
+		while(s[i] == c)
+			i++;
+		w++;
 	}
+	new_str[w] = NULL;
+	return (new_str);
 }
