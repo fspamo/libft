@@ -6,7 +6,7 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 12:41:43 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/13 15:35:56 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/13 17:16:44 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,8 @@ char *ft_itoa(int n)
 	char *str; 
 
 	str = malloc((ft_getdigit(n) + 1) * sizeof(char *));
+	if(!str)
+		return NULL;
 	if(n < 0)
 	{
 		str[0] = '-';
