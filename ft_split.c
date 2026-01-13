@@ -4,13 +4,13 @@
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */ /*   Created: 2026/01/11 18:21:22 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/12 21:59:12 by cbozkurt         ###   ########.fr       */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/13 16:24:45 by cbozkurt          #+#    #+#             */
+/*   Updated: 2026/01/13 16:25:25 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 #include <stddef.h>
 #include "libft.h"
 
