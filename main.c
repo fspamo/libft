@@ -4,6 +4,6 @@
 
 int main(void)
 {
-	char str[] = "flex memory area lol";
-	ft_putendl_fd(str, 1);
+	int nbr = -1337;
+	ft_putnbr_fd(nbr, 1);
 }
