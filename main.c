@@ -2,25 +2,27 @@
 #include <stdlib.h>
 #include "libft.h"
 
-char    ft_test(unsigned int i, char c)
+void to_upper(unsigned int i, char *c)
 {
-    (void)i;
-    if (c >= 'a' && c <= 'z')
-        return (c - 32); // to uppercase
-    return (c);
+	(void)i;
+	while(c[i])
+	{
+		if (*c >= 'a' && *c <= 'z')
+			*c -= 32;
+		printf("%c", c[i]);
+		i++;
+	}
 }
 
 int main(void)
 {
-    char *result;
 
-    result = ft_strmapi("cahit", ft_test);
-    if (!result)
-        return (1);
+	char str[] = "hello";
+	printf("%s \n", str);
+	ft_striteri(str, to_upper);
 
-    printf("Result: %s\n", result);
+	printf("Result: %s\n", str);
 	// RESULT SHOULD BE UPPERCASE HELLO WORLD
-    free(result);
-    return (0);
+	return (0);
 }
 
