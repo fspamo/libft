@@ -2,6 +2,12 @@
 # define LIBFT_H
 # include <string.h>
 
+typedef struct	s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
 int		ft_isalpha();
 int		ft_isdigit();
 int		ft_isalnum();
