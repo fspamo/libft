@@ -4,6 +4,11 @@
 
 int main(void)
 {
-	int nbr = -1337;
-	ft_putnbr_fd(nbr, 1);
+	int a[] = {0, 13, 9};
+	// char a[] = {'c','h','a','r'};
+	ft_memset(a, 255, 0);
+	printf("%d\n", a[0]);
+	printf("%d\n", a[1]);
+	printf("%d\n", a[2]);
+	// printf("%d\n", a[3]);
 }
