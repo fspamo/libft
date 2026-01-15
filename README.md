@@ -1,3 +1,3 @@
 # libft
 
-![buzz](https://github.com/user-attachments/assets/1849b26a-fce6-4b58-8df0-1c389d6d1e26)
+![buzz](https://github.com/user-attachments/assets/1bc47eac-27df-4435-865c-1be78ab7f7de)
