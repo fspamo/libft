@@ -6,23 +6,26 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 20:43:49 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/16 14:32:08 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/17 13:08:45 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+#include "libft.h"
+
 void ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	if(!lst || !del)
-		return NULL;
+    t_list *temp;
 
-	while(*lst)
-	{
-		temp = *lst->next;
-		del(*lst->content);
-		free(*lst);
-		*lst = temp->next;
-	}
-	*lst = NULL;
+    if (!lst || !del)
+        return;
+
+    while (*lst)
+    {
+        temp = (*lst)->next;
+        del((*lst)->content);
+        free(*lst);
+        *lst = temp;
+    }
 }
