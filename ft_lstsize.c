@@ -6,18 +6,18 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 18:00:50 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/14 18:11:46 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/17 13:57:04 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while(lst)
+	while (lst)
 	{
 		i++;
 		lst = lst->next;

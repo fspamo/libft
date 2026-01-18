@@ -6,13 +6,13 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 14:34:14 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/06 14:36:10 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/17 13:57:26 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(char c)
+int	ft_isprint(char c)
 {
-	if(c >= 32 && c <= 126)
+	if (c >= 32 && c <= 126)
 	{
 		return (1);
 	}

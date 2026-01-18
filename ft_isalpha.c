@@ -6,15 +6,15 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:00:10 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/05 15:23:33 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/17 13:59:59 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(char c)
+int	ft_isalpha(char c)
 {
-	if((c <= 90 && c >= 65) || (c >= 97 && c <= 122))
+	if ((c <= 90 && c >= 65) || (c >= 97 && c <= 122))
 	{
-		return 1;
+		return (1);
 	}
-	return 0;
+	return (0);
 }
