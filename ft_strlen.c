@@ -6,18 +6,16 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 14:39:26 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/06 14:44:41 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/18 15:27:38 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strlen(char *str)
 {
-	int idx;
+	int	idx;
 
 	idx = 0;
-	while(str[idx] != '\0')
-	{
+	while (str[idx] != '\0')
 		idx++;
-	}
 	return (idx);
 }

@@ -6,13 +6,13 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 11:51:20 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/08 12:33:02 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/18 15:17:41 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int ch)
+int	ft_toupper(int ch)
 {
-	if(ch >= 'a' && ch <= 'z')
+	if (ch >= 'a' && ch <= 'z')
 	{
 		ch = ch - 32;
 	}

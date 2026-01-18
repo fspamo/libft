@@ -6,14 +6,14 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 19:49:41 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/13 20:32:06 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/18 16:58:53 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int i;
-// dongu
+	int	i;
+
 	i = 0;
 	f(i, s);
 }

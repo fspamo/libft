@@ -6,13 +6,13 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 13:45:09 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/06 14:13:15 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/18 15:14:27 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-	if(c >= 0 && c <= 127)
+	if (c >= 0 && c <= 127)
 	{
 		return (1);
 	}

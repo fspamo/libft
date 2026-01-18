@@ -6,13 +6,14 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 12:20:17 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/06 13:34:39 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/18 20:43:40 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum(char c)
+int	ft_isalnum(char c)
 {
-	if((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9'))
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')
+		|| (c >= '0' && c <= '9'))
 	{
 		return (1);
 	}

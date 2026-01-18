@@ -6,13 +6,13 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 12:09:56 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/15 18:53:56 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/18 16:57:17 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(char c)
 {
-	if(c >= 48 && c <= 57)
+	if (c >= 48 && c <= 57)
 	{
 		return (1);
 	}

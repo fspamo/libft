@@ -6,18 +6,18 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 18:23:10 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/07 18:40:43 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/18 15:52:37 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-char *ft_strlcpy(char *dst, const char *src, size_t size)
+char	*ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
-	while(i < size)
+	while (i < size)
 	{
 		dst[i] = src[i];
 		i++;

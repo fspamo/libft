@@ -6,32 +6,32 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 15:03:20 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/07 17:15:07 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/18 15:25:08 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned int i;
-	unsigned char *_dest; 
-	unsigned char *_src;
-	_dest = (unsigned char*)dest;
-	_src = (unsigned char*)src;
+	unsigned int	i;
+	unsigned char	*_dest;
+	unsigned char	*_src;
+
+	_dest = (unsigned char *)dest;
+	_src = (unsigned char *)src;
 	i = 0;
-	if(_dest < _src)
+	if (_dest < _src)
 	{
-		while((n > 0) && (i < n))
+		while ((n > 0) && (i < n))
 		{
 			_dest[i] = _src[i];
 			i++;
 		}
 	}
-	//[s][][][][][d][][][]
 	else
 	{
-		while(n > 0)
+		while (n > 0)
 		{
 			n--;
 			_dest[n] = _src[n];
