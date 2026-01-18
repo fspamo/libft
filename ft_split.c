@@ -6,7 +6,7 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 16:24:45 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/18 17:06:03 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/18 23:34:06 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,31 @@
 
 size_t	count_words(char const *s, char c)
 {
-	int	word_count;
-	int	i;
+	size_t	count;
+	size_t	i;
+
+	count = 0;
+	i = 0;
+	if (!s)
+		return (0);
+	while (s[i])
+	{
+		while (s[i] == c)
+			i++;
+		if (s[i])
+		{
+			count++;
+			while (s[i] && s[i] != c)
+				i++;
+		}
+	}
+	return (count);
+}
+
+size_t	word_length(char const *s, char c)
+{
+	size_t	word_count;
+	size_t	i;
 
 	word_count = 0;
 	i = 0;
@@ -29,31 +52,50 @@ size_t	count_words(char const *s, char c)
 	return (word_count);
 }
 
+static void	ft_allfree(char **s, size_t w)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < w)
+	{
+		free(s[i]);
+		i++;
+	}
+	free(s);
+}
+
+static void	ft_skip(char **s, char c)
+{
+	while (**s == c)
+		(*s)++;
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**new_str;
-	int		i;
-	int		w;
+	size_t	w;
+	size_t	w_len;
 
-	new_str = malloc((ft_strlen(s) + 1) * sizeof(char *));
+	w = 0;
+	if (!s)
+		return (NULL);
+	new_str = malloc((count_words(s, c) + 1) * sizeof(char *));
 	if (!new_str)
 		return (NULL);
-	i = 0;
-	w = 0;
-	while (s[i] == c)
-		i++;
-	while (s[i])
+	ft_skip((char **)&s, c);
+	while (*s)
 	{
-		new_str[w] = malloc(count_words(&s[i], c) + 1);
+		w_len = word_length(s, c);
+		new_str[w] = malloc(w_len + 1);
 		if (!new_str[w])
-			return (NULL);
-		memcpy(new_str[w], &s[i], count_words(&s[i], c));
-		new_str[w][count_words(&s[i], c)] = '\0';
-		i += count_words(&s[i], c);
-		while (s[i] == c)
-			i++;
+			return (ft_allfree(new_str, w), NULL);
+		ft_memcpy(new_str[w], s, w_len);
+		new_str[w][w_len] = '\0';
+		s += w_len;
+		ft_skip((char **)&s, c);
 		w++;
 	}
-	new_str[w] = (NULL);
+	new_str[w] = NULL;
 	return (new_str);
 }

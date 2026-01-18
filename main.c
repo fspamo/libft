@@ -6,34 +6,37 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 18:41:49 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/15 20:41:05 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/18 23:41:57 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include "libft.h" // assuming t_list is defined here
+#include "libft.h"
 
-void print_content(void *content)
+void print_split(char **split)
 {
-    printf("%s\n", (char *)content);
+    int i = 0;
+    if (!split)
+    {
+        printf("NULL\n");
+        return;
+    }
+    while (split[i])
+    {
+        printf("split[%d] = \"%s\"\n", i, split[i]);
+        i++;
+    }
 }
 
 int main(void)
 {
-	t_list *node;
+    char **result;
 
+    // Test 1: normal case
+    printf("Test 1:\n");
+    result = ft_split("Hello world this is C", ' ');
+    print_split(result);
+    printf("\n");
 
-	*node = ft_lstnew(node);
-    t_list *list = ft_lstnew("Hello");
-    ft_lstadd_back(&list, ft_lstnew("World"));
-    ft_lstadd_back(&list, ft_lstnew("42"));
-
-    ft_lstiter(list, print_content);
-
-    // Output:
-    // Hello
-    // World
-    // 42
-    return 0;
+	return (0);
 }
-

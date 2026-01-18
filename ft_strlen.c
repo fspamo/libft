@@ -6,16 +6,18 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 14:39:26 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/18 15:27:38 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/18 23:40:31 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
 	int	idx;
 
 	idx = 0;
-	while (str[idx] != '\0')
+	while (s[idx] != '\0')
 		idx++;
 	return (idx);
 }

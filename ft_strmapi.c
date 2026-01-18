@@ -6,16 +6,15 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 17:12:03 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/13 18:51:44 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/18 23:34:48 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int		i;
+	size_t	i;
 	char	*value;
 
 	i = 0;
