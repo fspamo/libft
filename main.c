@@ -6,7 +6,7 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 18:41:49 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/19 13:56:41 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/19 16:45:27 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,14 @@
 int main(void)
 {
 	char *str = "merhaba";
-	char *next = "ben";
+	// char *next = "ben";
 
 	t_list *lst = ft_lstnew((void *)str);
-	t_list *lstnext = ft_lstnew((void *)next);
-	lst->next = lstnext;
+	// t_list *lstnext = ft_lstnew((void *)next);
+
+	// lst->next = lstnext;
+	// lstnext->next = NULL;
 	printf("%s \n", (char *)lst->content);
-	printf("%s \n", (char *)lst->next->content);
-	printf("%s \n", (char *)lstnext->content);
-	printf("%p \n", lst->next);
+	// printf("%s \n", (char *)lst->next->next);
+	printf("%d \n", ft_lstsize(lst));
 }
