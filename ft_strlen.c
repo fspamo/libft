@@ -6,7 +6,7 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 14:39:26 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/18 23:40:31 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/19 08:01:08 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *s)
 {
-	int	idx;
+	size_t	idx;
 
 	idx = 0;
 	while (s[idx] != '\0')
