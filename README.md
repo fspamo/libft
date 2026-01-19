@@ -27,6 +27,6 @@ To compile the library, run:
 make
 ```
 
-## Description
+## Resources 
 
-**Libft** is a foundational project in the 42 curriculum.  
+**AI** is used to understand C programming concepts, main functions that require in-depth testing.
