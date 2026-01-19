@@ -29,4 +29,4 @@ make
 
 ## Resources 
 
-**AI** is used to understand C programming concepts, main functions that require in-depth testing.
+**AI** is used to visualize memory and to understand C programming concepts, main functions that require in-depth testing.
