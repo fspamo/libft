@@ -25,3 +25,8 @@ To compile the library, run:
 
 ```bash
 make
+```
+
+## Description
+
+**Libft** is a foundational project in the 42 curriculum.  
