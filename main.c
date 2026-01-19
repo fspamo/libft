@@ -6,7 +6,7 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 18:41:49 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/19 11:17:16 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/19 13:56:41 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,14 @@
 
 int main(void)
 {
-	char *s;
-	size_t size = 5;
+	char *str = "merhaba";
+	char *next = "ben";
 
-	s = calloc(5, sizeof(char));
-	
-
+	t_list *lst = ft_lstnew((void *)str);
+	t_list *lstnext = ft_lstnew((void *)next);
+	lst->next = lstnext;
+	printf("%s \n", (char *)lst->content);
+	printf("%s \n", (char *)lst->next->content);
+	printf("%s \n", (char *)lstnext->content);
+	printf("%p \n", lst->next);
 }
