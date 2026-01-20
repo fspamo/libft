@@ -6,7 +6,7 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 18:41:49 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/20 15:15:43 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/20 16:29:02 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,28 @@
 
 int main(void)
 {
-	char *str = "merhaba";
-	// char *next = "ben";
+	// char *str = "merhaba";
+	char *next = "ben";
 	// char *ahmet = "ahmet";
 
-	t_list *lst = ft_lstnew(str);
-	// t_list *lstnext = ft_lstnew((void *)next);
+	t_list *lst = NULL;
 
-	lst->next = ft_lstnew("ben");
-	lst->next->next = ft_lstnew((void *)"ahmet");
+	t_list *lstnext = ft_lstnew((void *)next);
+
+	// lst->next = ft_lstnew("ben");
+	// lst->next->next = ft_lstnew((void *)"ahmet");
 	
 	// printf("%s \n", (char *)lst->content);
 	// printf("%p \n", (char *)lst->next);
 	// printf("%d \n", ft_lstsize(lst));
 	//
+	// add front
+	//
 	// ft_lstadd_front(&lst, lstnext);
+	//
+	// add back
+	//
+	ft_lstadd_back(&lst, lstnext);
 
 	// lst->next = lstnext;
 	// lstnext->next = NULL;
@@ -37,7 +44,7 @@ int main(void)
 	// printf("%s \n", (char *)lst->next->content);
 	// printf("%p \n", (char *)lst->next->next);
 	// printf("%d \n", ft_lstsize(lst));
-	printf("%s \n", (char *)ft_lstlast(lst)->content);
+	printf("%s \n", (char *)ft_lstlast(lst)->next->content);
 	
 	printf("%d \n", ft_lstsize(lst));
 }
