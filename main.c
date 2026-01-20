@@ -6,7 +6,7 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 18:41:49 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/20 16:46:31 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/20 19:04:35 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ int main(void)
 	char *next = "ben";
 	// char *ahmet = "ahmet";
 
-	t_list *lst = NULL;
+	t_list *lst = ft_lstnew(next);
 
-	t_list *lstnext = ft_lstnew((void *)next);
+	// t_list *lstnext = ft_lstnew((void *)next);
 
 	// lst->next = ft_lstnew("ben");
 	// lst->next->next = ft_lstnew((void *)"ahmet");
@@ -42,7 +42,7 @@ int main(void)
 	//
 	// add back
 	//
-	ft_lstadd_back(&lst, lstnext);
+	// ft_lstadd_back(&lst, lstnext);
 
 	// lst->next = lstnext;
 	// lstnext->next = NULL;
@@ -50,7 +50,8 @@ int main(void)
 	// printf("%s \n", (char *)lst->next->content);
 	// printf("%p \n", (char *)lst->next->next);
 	// printf("%d \n", ft_lstsize(lst));
-	printf("%s \n", (char *)ft_lstlast(lst)->next->content);
+	// printf("%s \n", (char *)ft_lstlast(lst)->next->content);
+	ft_lstclear(&lst, del);
 	
 	printf("%d \n", ft_lstsize(lst));
 }
