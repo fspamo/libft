@@ -6,12 +6,18 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 18:41:49 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/20 16:29:02 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/20 16:46:31 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
+
+void del(void * content)
+{
+	free(content);
+	// del function could be more complicated depending on the content
+}
 
 int main(void)
 {
