@@ -6,7 +6,7 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:11:54 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/21 15:32:01 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/21 17:43:07 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,16 @@
 
 void ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	void	*content;
+	t_list	*point_next;
+	t_list	*temp;
 
-	if (!del || !*lst)
-		return ;
-	while ((*lst)->next)
+	temp = *lst;
+	while (temp)
 	{
-		content = (*lst)->content;
-		del(content);
-		free(content);
-		*lst = (*lst)->next;
+		point_next = temp->next;
+		del(temp->content);
+		free(temp);
+		temp = point_next;
 	}
+	*lst = NULL;
 }
