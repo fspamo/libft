@@ -6,7 +6,7 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 17:11:15 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/19 08:10:13 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/21 13:45:49 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <stddef.h>
 # include <stdint.h>
+# include <unistd.h>
 
 typedef struct s_list
 {
