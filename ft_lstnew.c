@@ -6,7 +6,7 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 13:28:09 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/19 13:51:54 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/21 15:27:41 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstnew(void *content)
 	t_list	*node;
 
 	node = malloc(sizeof(t_list));
-	if(!node)
+	if (!node)
 		return (NULL);
 	node->content = content;
 	node->next = NULL;

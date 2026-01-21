@@ -6,7 +6,7 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 16:07:28 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/20 16:30:48 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/21 15:28:22 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	if (!(ft_lstlast(*lst)))
 		*lst = new;
 	else
-		ft_lstlast(*lst)->next = new; 
+		ft_lstlast(*lst)->next = new;
 }
