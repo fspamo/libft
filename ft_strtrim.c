@@ -6,11 +6,10 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 14:30:12 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/18 23:35:15 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/21 13:41:50 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h> 
 #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)

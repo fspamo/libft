@@ -6,11 +6,10 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 12:22:24 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/18 23:36:59 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/21 13:38:15 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

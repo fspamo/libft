@@ -6,11 +6,10 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 17:52:53 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/17 13:55:25 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/21 13:38:27 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)

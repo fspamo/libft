@@ -6,12 +6,10 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 16:24:45 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/18 23:34:06 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/21 13:41:33 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stddef.h>
 #include "libft.h"
 
 size_t	count_words(char const *s, char c)

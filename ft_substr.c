@@ -6,12 +6,11 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 17:57:16 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/18 17:03:32 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/21 13:43:54 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
+#include "libft.h"
 
 size_t	abs_at_home(size_t start, size_t len)
 {

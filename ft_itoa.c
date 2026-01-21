@@ -6,12 +6,10 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 12:41:43 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/18 15:13:46 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/21 13:39:03 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 static int	ft_getdigit(int n)
