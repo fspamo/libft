@@ -31,6 +31,6 @@ make
 
 **AI** is used to visualize memory and to understand C programming concepts, main functions that require in-depth testing.
 
-[GeeksForGeeks](https://www.geeksforgeeks.org/) for concepts and function usages.
-[FreeBSD](https://docs.freebsd.org/en/books/handbook/) for functions.
+[GeeksForGeeks](https://www.geeksforgeeks.org/) for concepts and function usages.\n
+[FreeBSD](https://docs.freebsd.org/en/books/handbook/) for functions.\n
 [W3Schools](https://www.w3schools.com/) for C fundamentals.
