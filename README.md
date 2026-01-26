@@ -21,7 +21,7 @@ The result is a reusable static library (`libft.a`) that provides reliable, well
 
 ### Compilation
 
-To compile the library, run:
+In order to compile the library, just run:
 
 ```bash
 make
@@ -30,3 +30,7 @@ make
 ## Resources 
 
 **AI** is used to visualize memory and to understand C programming concepts, main functions that require in-depth testing.
+
+[GeeksForGeeks](https://www.geeksforgeeks.org/) for concepts and function usages.
+[FreeBSD](https://docs.freebsd.org/en/books/handbook/) for functions.
+[W3Schools](https://www.w3schools.com/) for C fundamentals.
