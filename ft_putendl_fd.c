@@ -6,7 +6,7 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 23:45:06 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/18 17:06:15 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/26 14:46:29 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ void	ft_putendl_fd(char *s, int fd)
 		ft_putchar_fd(s[i], fd);
 		i++;
 	}
-	ft_putchar_fd('\0', fd);
+	ft_putchar_fd('\n', fd);
 }
