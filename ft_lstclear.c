@@ -6,13 +6,13 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:11:54 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/21 17:43:07 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/26 12:04:15 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*point_next;
 	t_list	*temp;
