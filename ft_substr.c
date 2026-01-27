@@ -6,35 +6,35 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 17:57:16 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/21 15:35:14 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/27 18:19:39 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	abs_at_home(size_t start, size_t len)
-{
-	if (start > len)
-		return (start - len);
-	else
-		return (len - start);
-}
-
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub_str;
+	char	*empty_string;
 	size_t	i;
-	size_t	conclusion;
 
+	empty_string = malloc(1);
+	empty_string[0] = '\0';
 	i = 0;
-	conclusion = abs_at_home(start, len);
-	sub_str = malloc((size_t)(conclusion + 1));
+	if (!s)
+		return (empty_string);
+	if (start > ft_strlen(s))
+		return (empty_string);
+	if (start > len && ft_strlen(s) < start + len)
+		return (NULL);
+	if (ft_strlen(s) < start + len)
+		len = ft_strlen(s) - start;
+	sub_str = malloc((size_t)(len + 1));
 	if (!sub_str)
 		return (NULL);
-	while (i < len)
+	while (len > i)
 	{
-		sub_str[i] = s[start];
-		start++;
+		sub_str[i] = s[start + i];
 		i++;
 	}
 	sub_str[i] = '\0';
