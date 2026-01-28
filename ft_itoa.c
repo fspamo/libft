@@ -6,62 +6,65 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 12:41:43 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/21 13:39:03 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/28 02:50:20 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
+#include <limits.h>
 
 static int	ft_getdigit(int n)
 {
-	int	digit;
-	int	i;
+	int		digit;
+	long	nb;
 
-	i = 0;
+	if (n == INT_MIN)
+		return (11);
+	nb = n;
 	digit = 0;
-	if (n < 0)
+	if (nb < 0)
 	{
-		n = -n;
+		nb = -nb;
 		digit++;
 	}
-	while (n > 10)
+	while (nb >= 10)
 	{
-		n = n / 10;
+		nb = nb / 10;
 		digit++;
-		i++;
 	}
 	digit++;
 	return (digit);
 }
 
-static char	*ft_getnbr(int n, char *str, int i)
+static char	*ft_getnbr(long n, char *str, int i)
 {
-	long int	nb;
-
-	nb = n;
-	if (nb > 10)
+	if (n >= 10)
 	{
-		str[i] = (nb % 10) + '0';
-		ft_getnbr((nb / 10), str, i - 1);
+		str[i] = (n % 10) + '0';
+		ft_getnbr(n / 10, str, i - 1);
 	}
 	else
-		str[i] = (nb % 10) + '0';
+		str[i] = (n % 10) + '0';
 	return (str);
 }
 
 char	*ft_itoa(int n)
 {
 	char	*str;
+	int		len;
+	long	nb;
 
-	str = malloc((ft_getdigit(n) + 1) * sizeof(char *));
+	nb = n;
+	len = ft_getdigit(n);
+	str = malloc(len + 1);
 	if (!str)
 		return (NULL);
-	if (n < 0)
+	str[len] = '\0';
+	if (nb < 0)
 	{
 		str[0] = '-';
-		str = ft_getnbr(-n, str, ft_getdigit(n) - 1);
+		nb = -nb;
 	}
-	else
-		str = ft_getnbr(n, str, ft_getdigit(n) - 1);
+	ft_getnbr(nb, str, len - 1);
 	return (str);
 }
