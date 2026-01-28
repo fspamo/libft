@@ -6,14 +6,13 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 13:17:47 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/18 15:15:21 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/28 15:29:35 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
-	return (s);
 }
