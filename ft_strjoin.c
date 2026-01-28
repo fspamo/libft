@@ -6,7 +6,7 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 12:22:24 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/28 01:38:14 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/28 15:01:39 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		i++;
 		j++;
 	}
+	str[i] = '\0';
 	return (str);
 }
