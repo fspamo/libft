@@ -6,7 +6,7 @@
 /*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 16:24:45 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/21 15:34:29 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/01/28 02:37:20 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,12 @@ static size_t	count_words(char const *s, char c)
 	size_t	count;
 	size_t	i;
 
-	count = 0;
-	i = 0;
 	if (!s)
 		return (0);
+	if (c == 0)
+		return (1);
+	count = 0;
+	i = 0;
 	while (s[i])
 	{
 		while (s[i] == c)
@@ -37,17 +39,18 @@ static size_t	count_words(char const *s, char c)
 
 static size_t	word_length(char const *s, char c)
 {
-	size_t	word_count;
 	size_t	i;
 
-	word_count = 0;
 	i = 0;
-	while (s[i] != c && s[i] != '\0')
+	if (c == 0)
 	{
-		word_count++;
-		i++;
+		while (s[i])
+			i++;
+		return (i);
 	}
-	return (word_count);
+	while (s[i] && s[i] != c)
+		i++;
+	return (i);
 }
 
 static void	ft_allfree(char **s, size_t w)
@@ -65,6 +68,8 @@ static void	ft_allfree(char **s, size_t w)
 
 static void	ft_skip(char **s, char c)
 {
+	if (c == 0)
+		return ;
 	while (**s == c)
 		(*s)++;
 }
@@ -88,7 +93,7 @@ char	**ft_split(char const *s, char c)
 		new_str[w] = malloc(w_len + 1);
 		if (!new_str[w])
 			return (ft_allfree(new_str, w), NULL);
-		ft_memcpy(new_str[w], s, w_len);
+		memcpy(new_str[w], s, w_len);
 		new_str[w][w_len] = '\0';
 		s += w_len;
 		ft_skip((char **)&s, c);
