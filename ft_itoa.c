@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbozkurt <cbozkurt@student.42kocaeli.com.  +#+  +:+       +#+        */
+/*   By: xahit <xahit@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 12:41:43 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/01/28 02:50:20 by cbozkurt         ###   ########.fr       */
+/*   Updated: 2026/02/01 22:57:29 by xahit            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <limits.h>
+#include <stdlib.h>
 
 static int	ft_getdigit(int n)
 {
