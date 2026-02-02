@@ -6,7 +6,7 @@
 /*   By: xahit <xahit@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 12:22:24 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/02/01 22:51:54 by xahit            ###   ########.fr       */
+/*   Updated: 2026/02/02 08:10:28 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	i;
 	size_t	j;
 
+	if (!s1 || !s2)
+		return (NULL);
 	i = 0;
 	j = 0;
 	str_sum = ft_strlen(s1) + ft_strlen(s2);
