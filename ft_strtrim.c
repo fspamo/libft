@@ -6,7 +6,7 @@
 /*   By: xahit <xahit@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 14:30:12 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/02/01 22:48:44 by xahit            ###   ########.fr       */
+/*   Updated: 2026/02/02 17:25:09 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int	idx;
 	int	jdx;
 
+	if (!s1 || !set)
+		return (NULL);
 	idx = 0;
 	while (s1[idx] && ft_strchr(set, s1[idx]))
 		idx++;
