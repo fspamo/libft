@@ -6,7 +6,7 @@
 /*   By: xahit <xahit@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 23:32:18 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/02/01 22:53:58 by xahit            ###   ########.fr       */
+/*   Updated: 2026/02/02 17:46:02 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i])
 	{
