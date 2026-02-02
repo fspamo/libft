@@ -6,7 +6,7 @@
 /*   By: xahit <xahit@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 18:11:54 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/02/01 22:56:55 by xahit            ###   ########.fr       */
+/*   Updated: 2026/02/02 17:57:49 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	t_list	*point_next;
 	t_list	*temp;
 
+	if (!lst || !del)
+		return ;
 	temp = *lst;
 	while (temp)
 	{
