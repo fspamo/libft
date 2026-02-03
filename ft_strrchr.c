@@ -6,7 +6,7 @@
 /*   By: xahit <xahit@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 13:27:52 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/02/01 22:49:08 by xahit            ###   ########.fr       */
+/*   Updated: 2026/02/03 13:17:41 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *s, int c)
 
 	i = 0;
 	last_seen = (void *)0;
-	if (c == 0)
+	if ((unsigned char)c == 0)
 		return ((char *)(ft_strlen(s) + (unsigned char *)&s[i]));
 	while (s[i])
 	{

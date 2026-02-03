@@ -6,7 +6,7 @@
 /*   By: xahit <xahit@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 15:03:20 by cbozkurt          #+#    #+#             */
-/*   Updated: 2026/02/01 22:55:30 by xahit            ###   ########.fr       */
+/*   Updated: 2026/02/03 13:16:04 by cbozkurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			i++;
 		}
 	}
-	else
+	else if (dest > src)
 	{
 		while (n > 0)
 		{
